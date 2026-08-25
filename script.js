@@ -38,13 +38,9 @@ navLinks.forEach(link => {
 
 function consultarProducto(producto) {
 
-    const email = "REFLED@gmail.com";
+    const telefono = "5492235630264";
 
-    const subject = encodeURIComponent(
-        `Consulta por ${producto}`
-    );
-
-    const body = encodeURIComponent(
+    const mensaje = encodeURIComponent(
         `Hola REFLED,
 
 Estoy interesado/a en el ${producto}.
@@ -54,9 +50,10 @@ Quisiera consultar precio, medidas disponibles y opciones de envío.
 Muchas gracias.`
     );
 
-    window.location.href =
-        `mailto:${email}?subject=${subject}&body=${body}`;
-
+    window.open(
+        `https://wa.me/${telefono}?text=${mensaje}`,
+        "_blank"
+    );
 }
 
 
