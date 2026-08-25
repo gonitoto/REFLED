@@ -38,22 +38,31 @@ navLinks.forEach(link => {
 
 function consultarProducto(producto) {
 
-    const telefono = "5492235630264";
+    const mensajeWhatsApp = encodeURIComponent(
 
-    const mensaje = encodeURIComponent(
-        `Hola REFLED,
+`Hola REFLED 👋
 
-Estoy interesado/a en el ${producto}.
+Quisiera solicitar un presupuesto para un espejo a medida.
 
-Quisiera consultar precio, medidas disponibles y opciones de envío.
+Nombre: ${nombre}
+Email: ${email}
+Medidas aproximadas: ${medidas}
+Tipo de espejo: ${tipo}
 
-Muchas gracias.`
-    );
+Detalles:
+${mensaje}
 
-    window.open(
-        `https://wa.me/${telefono}?text=${mensaje}`,
-        "_blank"
-    );
+Espero su respuesta.
+
+Saludos.`
+);
+
+const telefono = "5492235630264";
+
+window.open(
+    `https://wa.me/${telefono}?text=${mensajeWhatsApp}`,
+    "_blank"
+);
 }
 
 
